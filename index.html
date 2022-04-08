@@ -23,10 +23,9 @@
           </span>
           <!-- backlog content -->
           <div id="backlog-content" class="custom-scroll">
-            <ul class="dragndrop-item-list" id="backlog-list">
-              <li class="drag-item">Testing 1</li>
-              <li class="drag-item">Testing 2</li>
-              <li class="drag-item">Testing 3</li>
+            <ul class="dragndrop-item-list" id="backlog-list" ondrop="dropItem(event)" ondragover="allowDrop(event)"
+              ondragenter="dragEnter(0)">
+              <!-- <li class="drag-item">Testing 1</li> -->
             </ul>
           </div>
 
@@ -55,10 +54,9 @@
           </span>
           <!-- progress content -->
           <div id="progress-content" class="custom-scroll">
-            <ul class="dragndrop-item-list" id="progress-list">
-              <li class="drag-item">Testing 1</li>
-              <li class="drag-item">Testing 2</li>
-              <li class="drag-item">Testing 3</li>
+            <ul class="dragndrop-item-list" id="progress-list" ondrop="dropItem(event)" ondragover="allowDrop(event)"
+              ondragenter="dragEnter(1)">
+              <!-- <li class="drag-item">Testing 1</li> -->
             </ul>
           </div>
 
@@ -88,10 +86,9 @@
           </span>
           <!-- complete content -->
           <div id="complete-content" class="custom-scroll">
-            <ul class="dragndrop-item-list" id="complete-list">
-              <li class="drag-item">Testing 1</li>
-              <li class="drag-item">Testing 2</li>
-              <li class="drag-item">Testing 3</li>
+            <ul class="dragndrop-item-list" id="complete-list" ondrop="dropItem(event)" ondragover="allowDrop(event)"
+              ondragenter="dragEnter(2)">
+              <!-- <li class="drag-item">Testing 1</li> -->
             </ul>
           </div>
 
@@ -121,17 +118,9 @@
           </span>
           <!-- on-hold content -->
           <div id="on-hold-content" class="custom-scroll">
-            <ul class="dragndrop-item-list" id="on-hold-list">
-              <li class="drag-item">Testing 1</li>
-              <li class="drag-item">Testing 2</li>
-              <li class="drag-item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae rerum cumque
-                exercitationem ullam natus obcaecati nostrum ipsam, neque debitis nulla omnis fugit deserunt dolore
-                perferendis, fugiat eius est necessitatibus aperiam laborum assumenda ut iure adipisci. Quia velit
-                veritatis ut nesciunt, suscipit placeat obcaecati officia corrupti, debitis, id facere aperiam
-                architecto animi officiis esse. Rem saepe voluptate molestiae, facilis quasi a. Sit quam ea excepturi
-                maxime ipsum dolore quod iste pariatur porro, voluptatem soluta harum, libero, mollitia animi
-                praesentium laboriosam eveniet distinctio debitis est labore? Vero ea eius iste. Facilis nostrum cum sit
-                cupiditate similique neque dignissimos sed possimus placeat optio.</li>
+            <ul class="dragndrop-item-list" id="on-hold-list" ondrop="dropItem(event)" ondragover="allowDrop(event)"
+              ondragenter="dragEnter(3)">
+              <!-- <li class="drag-item">Testing 1</li> -->
             </ul>
           </div>
 
