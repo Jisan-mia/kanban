@@ -47,7 +47,7 @@ Custom Scrollbar for every column
 
 .custom-scroll {
   overflow-y: auto;
-  max-height: 52vh;
+  max-height: 46vh;
 }
 
 .custom-scroll::-webkit-scrollbar-track {
@@ -128,6 +128,38 @@ Column styles
 
 .add-btn-group {
   padding:0 12px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr auto;
+  gap: 1rem;
+}
+
+.add-container {
+  display: none;
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+}
+
+.add-container .add-item:focus {
+  box-shadow: 0 0 5px #5aa1f380;
+}
+
+
+.add-btn-group .solid {
+  grid-column: 3 / -1;
+  grid-row: 1 / 2;
+
+  display: none;
+}
+
+.add-container .add-item {
+  min-height: 100px;
+  border: none;
+  outline: none;
+  padding: 7px;
+
+  border: 1.5px solid #6da0dad2;
+
 }
 .add-btn-group .add-btn {
   border: none;
@@ -148,6 +180,8 @@ Column styles
 .add-btn-group .solid:hover {
   color: #fff;
 }
+
+
 
 
 /* 

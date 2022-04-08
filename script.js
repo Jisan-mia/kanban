@@ -115,6 +115,33 @@ function updateDOM() {
 }
 
 
+// add item to column
+function addItemToColumn(columnIndex) {
+  const itemText = addItems[columnIndex].textContent;
+  const selectedArray = listArray[columnIndex];
+  selectedArray.push(itemText);
+  addItems[columnIndex].textContent = '';
+
+  updateDOM()
+}
+
+// show add item container
+function showAddContainer(columnIndex) {
+  addBtns[columnIndex].style.display = 'none'
+  saveItemBtns[columnIndex].style.display = 'block';
+  addItemContainers[columnIndex].style.display = 'block'
+}
+
+// save an item
+function saveItem(columnIndex) {
+  addBtns[columnIndex].style.display = 'block'
+  saveItemBtns[columnIndex].style.display = 'none';
+  addItemContainers[columnIndex].style.display = 'none'
+
+  addItemToColumn(columnIndex)
+}
+
+
 
 // allow items to reflect drag n drop items
 function rebuildArrays() {
@@ -124,7 +151,7 @@ function rebuildArrays() {
   progressListArray = [];
   completeListArray = [];
   onHoldListArray = [];
-  
+
   for(let i = 0; i < backlogList.children.length; i++) {
     backlogListArray.push(backlogList.children[i].textContent);
   }
