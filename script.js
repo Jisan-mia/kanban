@@ -66,7 +66,11 @@ function createItemElm(columnEl, column, item, index) {
   listEl.textContent = item;
   listEl.draggable = true;
 
-  listEl.setAttribute('ondragstart', 'drag(event)')
+  listEl.setAttribute('ondragstart', 'drag(event)');
+  listEl.contentEditable = true;
+  listEl.id = index;
+
+  listEl.setAttribute('onfocusout', `updateItem(${index}, ${column})`)
 
   // append into the right column
   columnEl.appendChild(listEl)
@@ -114,6 +118,22 @@ function updateDOM() {
   updateSavedColumns();
 }
 
+
+// update item - delete if blank, or update array value
+function updateItem(itemIndex, columnIndex) {
+  const selectedArray = listArray[columnIndex];
+  const selectedColumnEl = listColumns[columnIndex].children;
+  const selectedItemText = selectedColumnEl[itemIndex].textContent;
+
+  if(!selectedItemText) {
+    selectedArray.splice(itemIndex, 1);
+  } else {
+    selectedArray.splice(itemIndex, 1, selectedItemText);
+  }
+
+  
+  updateDOM();
+}
 
 // add item to column
 function addItemToColumn(columnIndex) {

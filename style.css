@@ -119,7 +119,13 @@ Column styles
   font-size: 1rem;
   transition: 0.2s ease-in-out; 
   height: fit-content;
-  
+
+  border: 1px solid transparent;
+}
+.dragndrop-item-list .drag-item:focus {
+  outline: none;
+  background: #fff;
+  border-color: rgb(61, 166, 201);
 }
 
 .dragndrop-item-list .drag-item:hover {
@@ -143,6 +149,7 @@ Column styles
 .add-container .add-item:focus {
   box-shadow: 0 0 5px #5aa1f380;
 }
+
 
 
 .add-btn-group .solid {
