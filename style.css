@@ -250,5 +250,19 @@ drag n drop
 =====================================
 */
 .over {
-  padding: 50px 10px;
+  /* padding: 50px 0; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.over li.drag-item {
+
+}
+.drag-item-placeholder {
+  border: 1px dashed grey;
+  min-height: 50px;
+  margin: 16px 15px;
+  border-radius: 3px;
+}
+.over .drag-item-placeholder {
+  border: 1px solid rgb(151, 211, 231)
 }
